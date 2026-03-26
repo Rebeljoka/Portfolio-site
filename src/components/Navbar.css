@@ -1,0 +1,50 @@
+@import "../index.css";
+
+.navbar {
+	position: fixed;
+	top: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
+
+	padding: 1.75rem 5rem;
+	display: flex;
+	gap: 5rem;
+	align-items: center;
+
+	/* Frosted glass */
+	backdrop-filter: blur(22px);
+	-webkit-backdrop-filter: blur(22px);
+	background: rgba(255, 255, 255, 0.12);
+
+	/* Bigger pill shape */
+	border-radius: 40px;
+
+	/* Subtle border */
+	border: 1px solid rgba(255, 255, 255, 0.25);
+
+	z-index: 50;
+}
+
+.logo {
+	width: 2.5rem;
+}
+
+.navbar-menu {
+	display: flex;
+	gap: 3.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-link {
+	color: white;
+	text-decoration: none;
+	font-size: 1.45rem;
+	font-weight: 500;
+	opacity: 0.95;
+}
+
+.navbar-link:hover {
+	opacity: 1;
+}
