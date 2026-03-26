@@ -1,15 +1,18 @@
 import "./App.css";
 import Iridescence from "./components/Iridescence";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
-		<div className="relative w-full h-screen overflow-hidden">
-			<Iridescence color={[1, 1, 1]} speed={1} amplitude={0.1} mouseReact />
-
-			<div className="relative z-10 text-white">
-				<h1>Hello world</h1>
-			</div>
-		</div>
+        <>
+            <Navbar />
+            <Iridescence 
+                color={[0.5,0.6,0.8]}
+                mouseReact
+                amplitude={0.1}
+                speed={1}
+            />
+        </>
 	);
 }
 
