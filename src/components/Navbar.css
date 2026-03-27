@@ -5,34 +5,35 @@
 	top: 3rem;
 	left: 50%;
 	transform: translateX(-50%);
-	padding: 1.75rem 5rem;
+	padding: 1.75rem 2.5rem;
 	display: flex;
-	gap: 5rem;
+	gap: 4rem;
 	align-items: center;
-	backdrop-filter: blur(22px);    /* Frosted glass */
+	backdrop-filter: blur(22px); /* Frosted glass */
 	-webkit-backdrop-filter: blur(22px);
 	background: rgba(255, 255, 255, 0.12);
-	border-radius: 40px;    /* Bigger pill shape */
-	border: 1px solid rgba(255, 255, 255, 0.25);    /* Subtle border */
-	z-index: 50;
+	border-radius: 40px; /* Bigger pill shape */
+	border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
+	z-index: 1;
+	text-align: center;
 }
 
 .logo {
 	width: 2.5rem;
-    max-width: none;
-    transition: transform 0.6s ease;
+	max-width: none;
+	animation: spin 1.2s linear infinite;
+	animation-play-state: paused; /* default: paused */
 }
 
 .logo:hover {
-    animation: spin 1.2s cubic-bezier(0.4, 0.2, 0.2, 1) infinite;
+	animation-play-state: running; /* only spins on hover */
 }
 
 @keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
+	to {
+		transform: rotate(360deg);
+	}
 }
-
 
 .navbar-menu {
 	display: flex;
@@ -42,42 +43,39 @@
 	padding: 0;
 }
 
-/* .navbar-link {
-	color: white;
-	text-decoration: none;
-	font-size: 1.45rem;
-	font-weight: 500;
-	opacity: 0.95;
-}
-
-.navbar-link:hover {
-    text-decoration: underline;
-} */
-
 .navbar-link {
 	color: white;
 	text-decoration: none;
 	font-size: 1.45rem;
 	font-weight: 500;
 	opacity: 0.95;
-    position: relative;
+	position: relative;
+	padding: 0.5rem 1.2rem;
+	display: flex;
+	align-items: center;
+	z-index: 2;
 }
 
 .navbar-link::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    border-radius: 4px;
-    background-color: white;
-    bottom: -2.5px;
-    left: 0;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .3s ease-in-out;
-  }
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+	transform: scale(0);
+	opacity: 0;
+}
 
 .navbar-link:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
+	transform: scale(1);
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-link.active::before {
+	transform: scale(1);
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.25);
 }

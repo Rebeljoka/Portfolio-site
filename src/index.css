@@ -21,7 +21,7 @@ h4, h5, h6 {
     font-family: var(--sub-headings);
 }
 
-a, span {
+a, span, link {
     font-family: var(--anchors);
 }
 

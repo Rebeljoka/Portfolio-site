@@ -1,7 +1,12 @@
 import "./Navbar.css";
 import logo from "../assets/logo.webp";
+import { useLocation, Link } from "react-router-dom";
 
 export default function Navbar() {
+	const location = useLocation();
+
+	const isActive = (path: string) => location.pathname === path;
+
 	return (
 		<nav className="navbar">
 			<div className="navbar-logo">
@@ -9,10 +14,10 @@ export default function Navbar() {
             </div>
 
 			<ul className="navbar-menu">
-				<li><a className="navbar-link" href="/">Home</a></li>
-				<li><a className="navbar-link" href="/projects">Projects</a></li>
-				<li><a className="navbar-link" href="/about">About Me</a></li>
-				<li><a className="navbar-link" href="/contact">Contact</a></li>
+				<li><Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">Home</Link></li>
+				<li><Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">Projects</Link></li>
+				<li><Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">About Me</Link></li>
+				<li><Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">Contact</Link></li>
 			</ul>
 		</nav>
 	);
