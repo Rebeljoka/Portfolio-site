@@ -5,29 +5,34 @@
 	top: 3rem;
 	left: 50%;
 	transform: translateX(-50%);
-
 	padding: 1.75rem 5rem;
 	display: flex;
 	gap: 5rem;
 	align-items: center;
-
-	/* Frosted glass */
-	backdrop-filter: blur(22px);
+	backdrop-filter: blur(22px);    /* Frosted glass */
 	-webkit-backdrop-filter: blur(22px);
 	background: rgba(255, 255, 255, 0.12);
-
-	/* Bigger pill shape */
-	border-radius: 40px;
-
-	/* Subtle border */
-	border: 1px solid rgba(255, 255, 255, 0.25);
-
+	border-radius: 40px;    /* Bigger pill shape */
+	border: 1px solid rgba(255, 255, 255, 0.25);    /* Subtle border */
 	z-index: 50;
 }
 
 .logo {
 	width: 2.5rem;
+    max-width: none;
+    transition: transform 0.6s ease;
 }
+
+.logo:hover {
+    animation: spin 1.2s cubic-bezier(0.4, 0.2, 0.2, 1) infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 
 .navbar-menu {
 	display: flex;
@@ -37,7 +42,7 @@
 	padding: 0;
 }
 
-.navbar-link {
+/* .navbar-link {
 	color: white;
 	text-decoration: none;
 	font-size: 1.45rem;
@@ -46,5 +51,33 @@
 }
 
 .navbar-link:hover {
-	opacity: 1;
+    text-decoration: underline;
+} */
+
+.navbar-link {
+	color: white;
+	text-decoration: none;
+	font-size: 1.45rem;
+	font-weight: 500;
+	opacity: 0.95;
+    position: relative;
+}
+
+.navbar-link::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: white;
+    bottom: -2.5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+
+.navbar-link:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
