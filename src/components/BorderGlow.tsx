@@ -13,6 +13,7 @@ interface BorderGlowProps {
 	animated?: boolean;
 	colors?: string[];
 	fillOpacity?: number;
+	active?: boolean;
 }
 
 function parseHSL(hslStr: string): { h: number; s: number; l: number } {
@@ -89,7 +90,7 @@ function buildMeshGradients(colors: string[]): string[] {
 	return gradients;
 }
 
-const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeSensitivity = 30, glowColor = "40 80 80", backgroundColor = "#060010", borderRadius = 28, glowRadius = 40, glowIntensity = 1.0, coneSpread = 25, animated = false, colors = ["#c084fc", "#f472b6", "#38bdf8"], fillOpacity = 0.5 }) => {
+const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeSensitivity = 30, glowColor = "40 80 80", backgroundColor = "#060010", borderRadius = 28, glowRadius = 40, glowIntensity = 1.0, coneSpread = 25, animated = false, colors = ["#c084fc", "#f472b6", "#38bdf8"], fillOpacity = 0.5, active = false }) => {
 	const cardRef = useRef<HTMLDivElement>(null);
 	const [isHovered, setIsHovered] = useState(false);
 	const [cursorAngle, setCursorAngle] = useState(45);
@@ -172,7 +173,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 	}, [animated]);
 
 	const colorSensitivity = edgeSensitivity + 20;
-	const isVisible = isHovered || sweepActive;
+	const isVisible = active || isHovered || sweepActive;
 	const borderOpacity = isVisible ? Math.max(0, (edgeProximity * 100 - colorSensitivity) / (100 - colorSensitivity)) : 0;
 	const glowOpacity = isVisible ? Math.max(0, (edgeProximity * 100 - edgeSensitivity) / (100 - edgeSensitivity)) : 0;
 
@@ -187,12 +188,15 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 			onPointerMove={handlePointerMove}
 			onPointerEnter={() => setIsHovered(true)}
 			onPointerLeave={() => setIsHovered(false)}
-			className={`relative grid isolate border border-white/15 ${className}`}
+			className={`relative grid isolate ${className}`}
 			style={{
 				background: backgroundColor,
 				borderRadius: `${borderRadius}px`,
 				transform: "translate3d(0, 0, 0.01px)",
-				boxShadow: "rgba(0,0,0,0.1) 0 1px 2px, rgba(0,0,0,0.1) 0 2px 4px, rgba(0,0,0,0.1) 0 4px 8px, rgba(0,0,0,0.1) 0 8px 16px, rgba(0,0,0,0.1) 0 16px 32px, rgba(0,0,0,0.1) 0 32px 64px",
+				boxShadow: isVisible? "rgba(0,0,0,0.1) 0 1px 2px, rgba(0,0,0,0.1) 0 2px 4px, rgba(0,0,0,0.1) 0 4px 8px, rgba(0,0,0,0.1) 0 8px 16px, rgba(0,0,0,0.1) 0 16px 32px, rgba(0,0,0,0.1) 0 32px 64px"
+                : "none",
+                transition: "box-shadow 0.3s ease-out",
+
 			}}>
 			{/* mesh gradient border */}
 			<div
