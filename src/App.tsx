@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import Iridescence from "./components/Iridescence";
 import Navbar from "./components/Navbar";
-import { Component } from "react";
 
 // Placeholder pages - replace with your actual components
 import Home from "./components/Pages/Home";
