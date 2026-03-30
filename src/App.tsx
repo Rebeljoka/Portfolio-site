@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Iridescence from "./components/Iridescence";
 import Navbar from "./components/Navbar";
 
@@ -20,6 +21,7 @@ function App() {
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
+			<Analytics />
 		</Router>
 	);
 }
