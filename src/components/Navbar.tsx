@@ -2,6 +2,7 @@ import "../App.css";
 import logo from "../assets/logo.webp";
 import { useLocation, Link } from "react-router-dom";
 import BorderGlow from "./BorderGlow";
+import { PiHouseLineBold, PiBlueprintBold, PiUserBold, PiAddressBookBold } from "react-icons/pi";
 
 export default function Navbar() {
 	const location = useLocation();
@@ -9,33 +10,45 @@ export default function Navbar() {
 	const isActive = (path: string) => location.pathname === path;
 
 	return (
-		<nav className="navbar">
-			<div className="navbar-logo">
-				<img src={logo} alt="Logo" className="logo" />
-			</div>
+		<nav className="navbar flex w-max align-middle text-center fixed top-12 left-1/2 -translate-x-1/2">
+
+			<img src={logo} alt="Logo" className="logo" />
 
 			<ul className="navbar-menu flex">
 				<li>
                     <BorderGlow>
-                        <Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">Home</Link>
+                        <Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">
+                            <PiHouseLineBold className="mt-1.25 mr-1"/>
+                            Home
+                        </Link>
                     </BorderGlow>
                 </li>
 				<li>
                     <BorderGlow>
-                        <Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">Projects</Link>
+                        <Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">
+                            <PiBlueprintBold className="mt-1.25 mr-1"/>
+                            Projects
+                        </Link>
                     </BorderGlow>
                 </li>
 				<li>
                     <BorderGlow>
-                        <Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">About Me</Link>
+                        <Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">
+                            <PiUserBold className="mt-1.25 mr-1"/>
+                            About Me
+                        </Link>
                     </BorderGlow>
                 </li>
 				<li>
                     <BorderGlow>
-                        <Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">Contact</Link>
+                        <Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">
+                            <PiAddressBookBold className="mt-1.25 mr-1"/>
+                            Contact
+                        </Link>
                     </BorderGlow>
                 </li>
 			</ul>
+
 		</nav>
 	);
 }
