@@ -3,8 +3,8 @@ import TextType from "../TextType";
 
 export default function Home() {
 	return (
-		<section className="w-full min-h-screen mt-128 flex justify-center text-white text-center">
-            <div className="Name">
+		<section className="w-full h-full h-screen flex justify-center text-white text-center">
+            <div className="m-auto">
                 <div>
                     <h1 className="text-9xl font-black">Habib Ullah</h1>
                 </div>

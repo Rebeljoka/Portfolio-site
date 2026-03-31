@@ -11,13 +11,19 @@
 	display: flex;
 	gap: 4rem;
 	align-items: center;
+    text-align: center;
 	backdrop-filter: blur(22px); /* Frosted glass */
 	-webkit-backdrop-filter: blur(22px);
 	background: rgba(255, 255, 255, 0.12);
 	border-radius: 40px; /* Bigger pill shape */
 	border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
 	z-index: 1;
-	text-align: center;
+    width: max-content;
+}
+
+.navbar > *,
+.navbar-menu > * {
+    flex-shrink: 0;
 }
 
 .logo {
