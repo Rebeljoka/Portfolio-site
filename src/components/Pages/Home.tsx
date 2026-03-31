@@ -1,10 +1,23 @@
 import "../../App.css";
+import TextType from "../TextType";
 
 export default function Home() {
 	return (
-		<div className="w-full min-h-screen pt-32 px-8 text-white">
-			<h1 className="text-4xl font-bold mb-4">Welcome to my portfolio</h1>
-			<p className="text-lg opacity-90">This is my homepage content.</p>
+		<div className="w-full min-h-screen flex mt-100 justify-center text-white">
+			<h1 className="text-9xl font-black">Habib Ullah</h1>
+            <h1 className="text-9xl font-black px-8">|</h1>
+            <TextType className="text-9xl font-black"
+                text={["Software Developer", "Systems Integrator", "Graphics Designer", "Tech Enthusiast"]}
+                typingSpeed={75}
+                pauseDuration={1500}
+                showCursor
+                cursorCharacter="|"
+                deletingSpeed={50}
+                variableSpeedEnabled={false}
+                variableSpeedMin={60}
+                variableSpeedMax={120}
+                cursorBlinkDuration={0.5}
+            />
 		</div>
 	);
-}
+    }

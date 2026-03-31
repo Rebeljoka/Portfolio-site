@@ -1,4 +1,4 @@
-import "./Navbar.css";
+import "../App.css";
 import logo from "../assets/logo.webp";
 import { useLocation, Link } from "react-router-dom";
 import BorderGlow from "./BorderGlow";
@@ -14,19 +14,27 @@ export default function Navbar() {
 				<img src={logo} alt="Logo" className="logo" />
 			</div>
 
-			<ul className="navbar-menu">
-				<li><BorderGlow>
-                    <Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">Home</Link>
-                </BorderGlow></li>
-				<li><BorderGlow>
-                    <Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">Projects</Link>
-                </BorderGlow></li>
-				<li><BorderGlow>
-                    <Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">About Me</Link>
-                </BorderGlow></li>
-				<li><BorderGlow>
-                    <Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">Contact</Link>
-                </BorderGlow></li>
+			<ul className="navbar-menu flex">
+				<li>
+                    <BorderGlow>
+                        <Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">Home</Link>
+                    </BorderGlow>
+                </li>
+				<li>
+                    <BorderGlow>
+                        <Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">Projects</Link>
+                    </BorderGlow>
+                </li>
+				<li>
+                    <BorderGlow>
+                        <Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">About Me</Link>
+                    </BorderGlow>
+                </li>
+				<li>
+                    <BorderGlow>
+                        <Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">Contact</Link>
+                    </BorderGlow>
+                </li>
 			</ul>
 		</nav>
 	);
