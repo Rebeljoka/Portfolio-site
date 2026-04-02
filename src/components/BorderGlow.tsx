@@ -200,7 +200,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 			}}>
 			{/* mesh gradient border */}
 			<div
-				className="absolute inset-0 rounded-[inherit] -z-[1]"
+				className="absolute inset-0 rounded-[inherit] -z-1"
 				style={{
 					border: "1px solid transparent",
 					background: [`linear-gradient(${backgroundColor} 0 100%) padding-box`, "linear-gradient(rgb(255 255 255 / 0%) 0% 100%) border-box", ...borderBg].join(", "),
@@ -213,7 +213,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 
 			{/* mesh gradient fill near edges */}
 			<div
-				className="absolute inset-0 rounded-[inherit] -z-[1]"
+				className="absolute inset-0 rounded-[inherit] -z-1"
 				style={
 					{
 						border: "1px solid transparent",
@@ -231,7 +231,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 
 			{/* outer glow */}
 			<span
-				className="absolute pointer-events-none z-[1] rounded-[inherit]"
+				className="absolute pointer-events-none z-1 rounded-[inherit]"
 				style={
 					{
 						inset: `${-glowRadius}px`,
@@ -251,7 +251,7 @@ const BorderGlow: React.FC<BorderGlowProps> = ({ children, className = "", edgeS
 				/>
 			</span>
 
-			<div className="flex flex-col relative overflow-auto z-[1]">{children}</div>
+			<div className="flex flex-col relative overflow-auto z-1">{children}</div>
 		</div>
 	);
 };

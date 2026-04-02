@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar";
 
 // Placeholder pages - replace with your actual components
 import Home from "./components/Pages/Home";
-const Projects = () => <div>Projects Page</div>;
+import Projects from "./components/Pages/Projects";
 const About = () => <div>About Me Page</div>;
 const Contact = () => <div>Contact Page</div>;
 

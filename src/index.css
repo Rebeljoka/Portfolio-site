@@ -6,6 +6,8 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/figtree";
 
+@plugin "daisyui";
+
 :root {
     --font-figtree: "Figtree Variable", sans-serif;
     --headings: "lobster two", cursive;
@@ -28,4 +30,8 @@ a, span, link {
 
 p, li {
     font-family: var(--paragraph);
+}
+
+body {
+    background: fixed center center no-repeat;
 }

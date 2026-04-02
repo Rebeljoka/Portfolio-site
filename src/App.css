@@ -78,5 +78,17 @@
 	background: rgba(255, 255, 255, 0.25);
 }
 
-/* Page Content CSS */
+/* HomePage Content CSS */
 
+/* Projects Content CSS */
+
+.tilted-card-demo-text {
+    font-weight: 900;
+    text-transform: capitalize;
+    box-shadow: 0 5px 30px #06001059;
+    border-radius: var(--radius-4xl);
+    background: #0006;
+    padding: .5rem 1em;
+    letter-spacing: -.5px;
+    margin: 2em;
+}
