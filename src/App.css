@@ -82,6 +82,10 @@
 
 /* Projects Content CSS */
 
+.projects-section {
+    width: 100vw;
+}
+
 .tilted-card-demo-text {
     font-weight: 900;
     text-transform: capitalize;

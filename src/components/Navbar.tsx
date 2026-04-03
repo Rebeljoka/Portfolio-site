@@ -1,5 +1,5 @@
 import "../App.css";
-import logo from "../assets/logo.webp";
+import logo from "../assets/img/logo.webp";
 import { useLocation, Link } from "react-router-dom";
 import BorderGlow from "./BorderGlow";
 import { PiHouseLineBold, PiBlueprintBold, PiUserBold, PiAddressBookBold } from "react-icons/pi";
