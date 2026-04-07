@@ -74,13 +74,13 @@ const items = [
 
 export default function Projects() {
 	return (
-		<section className="projects-section">
+		<section className="Projects">
             <div className="flex justify-center text-white text-center w-full">
-                <div>
+                <div className="w-full">
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64">Web Development Projects</h1>
                     </div>
-                    <div className="grid w-full grid-cols-1 lg:grid-cols-2 [@media(min-width:768px)_and_(max-width:1280px)]:grid-cols-2 [@media(min-width:768px)_and_(max-width:1280px)]:max-w-none [@media(min-width:768px)_and_(max-width:1280px)]:justify-items-center xl:grid-cols-4 gap-16 my-24 mx-auto max-w-fit">
+                    <div className="grid w-full justify-items-center grid-cols-1 lg:grid-cols-2 projects-grid xl:grid-cols-4 gap-24 my-24">
                         <div>
                             <TiltedCard
                                 imageSrc="https://mind-embodyy-spirit-92af4b6525c8.herokuapp.com/static/images/Logo.webp"
@@ -178,7 +178,7 @@ export default function Projects() {
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64">Graphics Design Projects</h1>
                     </div>
-                    <div className="w-full my-24">
+                    <div className="w-full my-24 graphics-container">
                         <Masonry
                             items={items}
                             ease="power3.out"

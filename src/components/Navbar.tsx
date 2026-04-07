@@ -19,7 +19,7 @@ export default function Navbar() {
                     <BorderGlow>
                         <Link className={`navbar-link ${isActive("/") ? "active" : ""}`} to="/">
                             <PiHouseLineBold className="mt-1.25 mr-1"/>
-                            Home
+                                <span>Home</span>
                         </Link>
                     </BorderGlow>
                 </li>
@@ -27,7 +27,7 @@ export default function Navbar() {
                     <BorderGlow>
                         <Link className={`navbar-link ${isActive("/projects") ? "active" : ""}`} to="/projects">
                             <PiBlueprintBold className="mt-1.25 mr-1"/>
-                            Projects
+                                <span>Projects</span>
                         </Link>
                     </BorderGlow>
                 </li>
@@ -35,7 +35,7 @@ export default function Navbar() {
                     <BorderGlow>
                         <Link className={`navbar-link ${isActive("/about") ? "active" : ""}`} to="/about">
                             <PiUserBold className="mt-1.25 mr-1"/>
-                            About Me
+                            <span>About Me</span>
                         </Link>
                     </BorderGlow>
                 </li>
@@ -43,7 +43,7 @@ export default function Navbar() {
                     <BorderGlow>
                         <Link className={`navbar-link ${isActive("/contact") ? "active" : ""}`} to="/contact">
                             <PiAddressBookBold className="mt-1.25 mr-1"/>
-                            Contact
+                            <span>Contact</span>
                         </Link>
                     </BorderGlow>
                 </li>
