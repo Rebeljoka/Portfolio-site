@@ -80,6 +80,16 @@
 
 /* HomePage Content CSS */
 
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
 /* Projects Content CSS */
 
 .tilted-card-demo-text {
@@ -94,7 +104,7 @@
 }
 
 .graphics-container {
-    background-color: rgba(223, 241, 255, 0.5);
+    background-color: rgba(106, 138, 190, 1);
     padding: 5%;
     border-radius: 80px;
 }
@@ -104,19 +114,27 @@
 
 /* MEDIA QUERIES */
 
-
 @media (max-width: 767px) {
-
     .logo {
-        width: 2rem;
+        display: none;
+    }
+
+    nav {
+        justify-content: center;
     }
 
     .navbar {
         width: 90vw;
+        display: flex;
     }
 
     .navbar-menu {
-        gap: 1.5rem;
+        gap: 1.125rem;
+        justify-content: center;
+    }
+
+    .navbar-link {
+        justify-content: center;
     }
 
     .navbar-link > span {
@@ -126,7 +144,6 @@
 	.navbar-link > svg {
 		margin-right: 0;
 	}
-    
 }
 
 

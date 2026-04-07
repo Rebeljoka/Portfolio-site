@@ -78,7 +78,7 @@ export default function Projects() {
             <div className="flex justify-center text-white text-center w-full">
                 <div className="w-full">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64">Web Development Projects</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Web Development Projects</h1>
                     </div>
                     <div className="grid w-full justify-items-center grid-cols-1 lg:grid-cols-2 projects-grid xl:grid-cols-4 gap-24 my-24">
                         <div>
@@ -176,7 +176,7 @@ export default function Projects() {
             <div className="text-white text-center w-full">
                 <div className="w-full mx-auto px-4 md:px-8">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64">Graphics Design Projects</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Graphics Design Projects</h1>
                     </div>
                     <div className="w-full my-24 graphics-container">
                         <Masonry
@@ -197,7 +197,7 @@ export default function Projects() {
             <div className="text-white text-center w-full">
                 <div className="w-full mx-auto px-4 md:px-8">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64">Content Creation</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Content Creation</h1>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-24">
                         <div className="w-full aspect-video rounded-xl overflow-hidden bg-black/30">
