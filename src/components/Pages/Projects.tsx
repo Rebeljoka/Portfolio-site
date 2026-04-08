@@ -28,7 +28,7 @@ const projectDetails = [
 	{
 		id: "2",
 		title: "Backlog Wishlyst",
-		description: "Developed a full-stack Steam game Wishlist platform enabling users to create, reorder, and track games in real time. Designed a responsive pastel-themed UI, integrated Steam API for dynamic game data, and deployed on Heroku with a PostgreSQL backend and Cloudinary media management. Implemented user authentication, real-time updates with WebSockets, and secure data handling. As repository owner, managed Git workflows, handled merge requests, and resolved version control conflicts to ensure consistent, production-ready releases.",
+		description: "Developed a full-stack Steam game wishlist platform enabling users to create, reorder, and track games in real time. Designed a responsive pastel-themed UI, integrated Steam API for dynamic game data, and deployed on Heroku with a PostgreSQL backend and Cloudinary media management. Implemented user authentication, real-time updates with WebSockets, and secure data handling. As repository owner, managed Git workflows, handled merge requests, and resolved version control conflicts to ensure consistent, production-ready releases.",
 		image: "https://backlog-wishlyst-70712188933f.herokuapp.com/static/favicon.0bc0cc5ba511.svg",
 		deployedLink: "https://backlog-wishlyst-70712188933f.herokuapp.com",
 		githubLink: "https://github.com/Rebeljoka/Capstone-Project---Backlog",
