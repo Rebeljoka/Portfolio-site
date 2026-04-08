@@ -104,7 +104,10 @@
 }
 
 .graphics-container {
-    background-color: rgba(106, 138, 190, 1);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     padding: 5%;
     border-radius: 80px;
 }

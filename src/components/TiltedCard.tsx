@@ -16,6 +16,7 @@ interface TiltedCardProps {
 	showTooltip?: boolean;
 	overlayContent?: React.ReactNode;
 	displayOverlayContent?: boolean;
+	onClick?: () => void;
 }
 
 const springValues: SpringOptions = {
@@ -24,7 +25,7 @@ const springValues: SpringOptions = {
 	mass: 2,
 };
 
-export default function TiltedCard({ imageSrc, altText = "Tilted card image", captionText = "", containerHeight = "300px", containerWidth = "100%", imageHeight = "300px", imageWidth = "300px", scaleOnHover = 1.1, rotateAmplitude = 14, showMobileWarning = true, showTooltip = true, overlayContent = null, displayOverlayContent = false }: TiltedCardProps) {
+export default function TiltedCard({ imageSrc, altText = "Tilted card image", captionText = "", containerHeight = "300px", containerWidth = "100%", imageHeight = "300px", imageWidth = "300px", scaleOnHover = 1.1, rotateAmplitude = 14, showMobileWarning = true, showTooltip = true, overlayContent = null, displayOverlayContent = false, onClick }: TiltedCardProps) {
 	const ref = useRef<HTMLElement>(null);
 	const x = useMotionValue(0);
 	const y = useMotionValue(0);
@@ -77,14 +78,15 @@ export default function TiltedCard({ imageSrc, altText = "Tilted card image", ca
 	return (
 		<figure
 			ref={ref}
-			className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
+			className="relative w-full h-full [perspective:800px] flex flex-col items-center justify-center cursor-pointer"
 			style={{
 				height: containerHeight,
 				width: containerWidth,
 			}}
 			onMouseMove={handleMouse}
 			onMouseEnter={handleMouseEnter}
-			onMouseLeave={handleMouseLeave}>
+			onMouseLeave={handleMouseLeave}
+			onClick={onClick}>
 			{showMobileWarning && <div className="absolute top-4 text-center text-sm block sm:hidden">This effect is not optimized for mobile. Check on desktop.</div>}
 
 			<motion.div
@@ -99,10 +101,14 @@ export default function TiltedCard({ imageSrc, altText = "Tilted card image", ca
 				<motion.img
 					src={imageSrc}
 					alt={altText}
-					className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)] bg-white"
+					className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
 					style={{
 						width: imageWidth,
 						height: imageHeight,
+						backdropFilter: "blur(22px)",
+						WebkitBackdropFilter: "blur(22px)",
+						background: "rgba(255, 255, 255, 0.12)",
+						border: "1px solid rgba(255, 255, 255, 0.25)",
 					}}
 				/>
 
