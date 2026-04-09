@@ -1,6 +1,6 @@
 import "../../App.css";
 import { useState } from "react";
-import Profile from "../../assets/img/Profile.jpg";
+import Profile from "../../assets/img/profile.jpg";
 
 export default function Home() {
 	const [isExpanded, setIsExpanded] = useState(false);
