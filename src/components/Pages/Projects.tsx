@@ -160,7 +160,7 @@ export default function Projects() {
 			</Modal>
 
             <div className="flex justify-center text-white text-center w-full">
-                <div className="w-full">
+                <div className="w-full WebDevPJs">
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Web Development Projects</h1>
                     </div>
@@ -262,7 +262,7 @@ export default function Projects() {
             </div>
 
             <div className="text-white text-center w-full">
-                <div className="w-full mx-auto px-4 md:px-8">
+                <div className="w-full mx-auto px-4 md:px-8 GraphicsDesignPJs">
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Graphics Design Projects</h1>
                     </div>
@@ -283,7 +283,7 @@ export default function Projects() {
             </div>
 
             <div className="text-white text-center w-full">
-                <div className="w-full mx-auto px-4 md:px-8">
+                <div className="w-full mx-auto px-4 md:px-8 ContentCreationPJs">
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Content Creation</h1>
                     </div>
