@@ -1,4 +1,3 @@
-import "../../App.css";
 import TextType from "../TextType";
 
 export default function Home() {

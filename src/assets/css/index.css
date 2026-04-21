@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/figtree";
+
+@plugin "daisyui";
+
+:root {
+	--font-figtree: "Figtree Variable", sans-serif;
+	--headings: "lobster two", cursive;
+	--sub-headings: "merriweather sans", sans-serif;
+	--anchors: "poppins", sans-serif;
+	--paragraph: "poiret one", cursive;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--headings);
+}
+
+h4,
+h5,
+h6 {
+	font-family: var(--sub-headings);
+}
+
+a,
+span,
+link {
+	font-family: var(--anchors);
+}
+
+p,
+li {
+	font-family: var(--paragraph);
+}
+
+body {
+	background: fixed center center no-repeat;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Navbar CSS */
+
+.navbar {
+	padding: 1.75rem 2.5rem;
+	gap: 4rem;
+	backdrop-filter: blur(22px); /* Frosted glass */
+	-webkit-backdrop-filter: blur(22px);
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 40px; /* Bigger pill shape */
+	border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
+	z-index: 1;
+}
+
+.navbar > *,
+.navbar-menu > * {
+	flex-shrink: 0;
+}
+
+.logo {
+	width: 2.5rem;
+	max-width: none;
+	animation: spin 1.2s linear infinite;
+	animation-play-state: paused; /* default: paused */
+}
+
+.logo:hover {
+	animation-play-state: running; /* only spins on hover */
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.navbar-menu {
+	gap: 3rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar-link {
+	color: white;
+	text-decoration: none;
+	font-size: 1.45em;
+	font-weight: 300;
+	position: relative;
+	padding: 0.5rem 1.2rem;
+	display: flex;
+	justify-content: center;
+	z-index: 2;
+}
+
+.navbar-link::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	border-radius: 20px;
+	background: rgba(255, 255, 255, 0.1);
+	z-index: -1;
+	transition: all 0.3s ease-in-out;
+	transform: scale(0);
+	opacity: 0;
+}
+
+.navbar-link:hover::before {
+	transform: scale(1);
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.15);
+}
+
+.navbar-link.active::before {
+	transform: scale(1);
+	opacity: 1;
+	background: rgba(255, 255, 255, 0.25);
+}
+
+/* Footer CSS */
+
+.footer {
+	width: 100%;
+	margin-top: 4rem;
+	padding: 3rem 2rem;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border-top: 1px solid rgba(255, 255, 255, 0.15);
+	border-radius: 0;
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 2rem;
+	margin-bottom: 2rem;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.footer-section {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.footer-section h3 {
+	color: rgba(255, 255, 255, 0.95);
+	font-size: 1.2rem;
+	margin: 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.footer-section ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+}
+
+.footer-section a,
+.footer-section p {
+	color: rgba(255, 255, 255, 0.75);
+	text-decoration: none;
+	transition: all 0.3s ease;
+	position: relative;
+	padding: 0.5rem 0;
+}
+
+.footer-section a::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
+	transition: width 0.3s ease;
+}
+
+.footer-section a:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
+.footer-section a:hover::before {
+	width: 100%;
+}
+
+.footer-bottom {
+	max-width: 1200px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 1.5rem;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 0.9rem;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+	margin: 0;
+}
+
+/* Media Queries */
+
+/* Navbar Media Queries */
+@media (max-width: 767px) {
+	.logo {
+		display: none;
+	}
+
+	nav {
+		justify-content: center;
+	}
+
+	.navbar {
+		width: 90vw;
+		display: flex;
+	}
+
+	.navbar-menu {
+		gap: 1.125rem;
+		justify-content: center;
+	}
+
+	.navbar-link {
+		justify-content: center;
+	}
+
+	.navbar-link > span {
+		display: none;
+	}
+
+	.navbar-link > svg {
+		margin-right: 0;
+	}
+}
+
+/* Footer Media Queries */
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 2rem 1rem;
+		margin-top: 2rem;
+	}
+
+	.footer-content {
+		grid-template-columns: 1fr;
+		padding: 1.5rem;
+		gap: 1.5rem;
+	}
+
+	.footer-section h3 {
+		font-size: 1rem;
+	}
+
+	.footer-section a,
+	.footer-section p {
+		font-size: 0.95rem;
+	}
+}
+
+@media (min-width: 769px) {
+	.footer-fixed-home {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		margin-top: 0;
+		z-index: 10;
+	}
+}
+
+/* Large Screen Pages Media Queries */
+
+@media (min-width: 1441px) {
+	.Projects,
+	.About,
+	.Contact {
+		margin-left: 400px;
+		margin-right: 400px;
+	}
+}

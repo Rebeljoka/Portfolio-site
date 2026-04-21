@@ -1,4 +1,3 @@
-import "../../App.css";
 import { useState } from "react";
 import Profile from "../../assets/img/profile.jpg";
 import LogoLoop from "../LogoLoop";

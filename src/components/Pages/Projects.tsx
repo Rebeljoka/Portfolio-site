@@ -1,4 +1,3 @@
-import "../../App.css";
 import { useState } from "react";
 import BlueNeon from "../../assets/img/Graphics/BlueNeon-OMGScorpion.png";
 import FadeVision from "../../assets/img/Graphics/FadeVision.png";
