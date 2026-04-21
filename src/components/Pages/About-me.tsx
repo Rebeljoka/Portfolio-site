@@ -42,11 +42,11 @@ export default function Home() {
 
 	return (
 		<section className="About">
-			<div className="flex justify-center text-white">
+			<div className="flex justify-center text-white mb-16">
 				<div className="w-full">
 					<div className={`grid grid-flow-col grid-rows-3 gap-4 mt-64 mb-4 mx-4 ${isExpanded ? "expanded" : ""}`} onClick={() => setIsExpanded(!isExpanded)}>
 						<div className="row-span-3">
-							<img src={Profile} alt="Profile Picture" className="w-128 h-128 rounded-full object-cover object-[45%_35%] 2xl:mx-16 mt-16 mb-16 mx-auto" />
+							<img src={Profile} alt="Profile Picture" className="w-lg h-128 rounded-full object-cover object-[45%_35%] 2xl:mx-16 mt-16 mb-16 mx-auto" />
 						</div>
 
 						<div className="col-span-2 flex">

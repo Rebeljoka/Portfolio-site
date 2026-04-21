@@ -159,10 +159,10 @@ export default function Projects() {
 				)}
 			</Modal>
 
-            <div className="flex justify-center text-white text-center w-full">
-                <div className="w-full WebDevPJs">
+            <div className="text-white text-center w-full mt-64 mb-16">
+                <div className="mx-4 WebDevPJs">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Web Development Projects</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mb-16 noselect">Web Development Projects</h1>
                     </div>
                     <div className="grid w-full justify-items-center grid-cols-1 lg:grid-cols-2 projects-grid xl:grid-cols-4 gap-24 my-24">
                         <div>
@@ -261,12 +261,12 @@ export default function Projects() {
                 </div>
             </div>
 
-            <div className="text-white text-center w-full">
-                <div className="w-full mx-auto px-4 md:px-8 GraphicsDesignPJs">
+            <div className="text-white text-center w-full mb-16">
+                <div className="mx-4 GraphicsDesignPJs">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Graphics Design Projects</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mb-16 noselect">Graphics Design Projects</h1>
                     </div>
-                    <div className="w-full my-24 graphics-container">
+                    <div className="graphics-container">
                         <Masonry
                             items={items}
                             ease="power3.out"
@@ -283,11 +283,11 @@ export default function Projects() {
             </div>
 
             <div className="text-white text-center w-full">
-                <div className="w-full mx-auto px-4 md:px-8 ContentCreationPJs">
+                <div className="mx-4 ContentCreationPJs">
                     <div>
-                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mt-64 noselect">Content Creation</h1>
+                        <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mb-16 noselect">Content Creation</h1>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-24">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div className="w-full aspect-video rounded-xl overflow-hidden bg-black/30">
                             <iframe
                                 className="w-full h-full"

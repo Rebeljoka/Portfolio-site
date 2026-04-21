@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Pages/Home";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About-me";
+import Footer from "./components/Footer";
 const Contact = () => <div>Contact Page</div>;
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
 				<Route path="/about" element={<About />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
+            <Footer />
 			<Analytics />
 		</Router>
 	);
