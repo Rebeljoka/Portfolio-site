@@ -163,16 +163,14 @@ export default function Projects() {
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mb-16 noselect">Web Development Projects</h1>
                     </div>
-                    <div className="grid w-full justify-items-center grid-cols-1 lg:grid-cols-2 projects-grid xl:grid-cols-4 gap-24 my-24">
-                        <div>
+                    <div className="projects-grid">
+                        <div className="T-card">
                             <TiltedCard
                                 imageSrc="https://mind-embodyy-spirit-92af4b6525c8.herokuapp.com/static/images/Logo.webp"
                                 altText="Const Collection | Art By Cecilia K."
                                 captionText="Const Collection | Art By Cecilia K."
-                                containerHeight="300px"
-                                containerWidth="300px"
-                                imageHeight="300px"
-                                imageWidth="300px"
+                                imageHeight="250px"
+                                imageWidth="250px"
                                 rotateAmplitude={12}
                                 scaleOnHover={1.05}
                                 showMobileWarning={false}
@@ -187,15 +185,13 @@ export default function Projects() {
                             />
                         </div>
 
-                        <div>
+                        <div className="T-card">
                             <TiltedCard
                                 imageSrc="https://backlog-wishlyst-70712188933f.herokuapp.com/static/favicon.0bc0cc5ba511.svg"
                                 altText="Backlog Wishlyst"
                                 captionText="Backlog Wishlyst"
-                                containerHeight="300px"
-                                containerWidth="300px"
-                                imageHeight="300px"
-                                imageWidth="300px"
+                                imageHeight="250px"
+                                imageWidth="250px"
                                 rotateAmplitude={12}
                                 scaleOnHover={1.05}
                                 showMobileWarning={false}
@@ -210,15 +206,13 @@ export default function Projects() {
                             />
                         </div>
 
-                        <div>
+                        <div className="T-card">
                             <TiltedCard
                                 imageSrc="https://github.com/Rebeljoka/Spock-It-To-Me/blob/main/assets/favicon/android-chrome-512x512.png?raw=true"
                                 altText="Spock It To Me"
                                 captionText="Spock It To Me"
-                                containerHeight="300px"
-                                containerWidth="300px"
-                                imageHeight="300px"
-                                imageWidth="300px"
+                                imageHeight="250px"
+                                imageWidth="250px"
                                 rotateAmplitude={12}
                                 scaleOnHover={1.05}
                                 showMobileWarning={false}
@@ -233,15 +227,13 @@ export default function Projects() {
                             />
                         </div>
 
-                        <div>
+                        <div className="T-card">
                             <TiltedCard
                                 imageSrc="https://github.com/Rebeljoka/mental-health-awareness/blob/main/assets/favicons/android-chrome-512x512.png?raw=true"
                                 altText="Quiet Bloom"
                                 captionText="Quiet Bloom"
-                                containerHeight="300px"
-                                containerWidth="300px"
-                                imageHeight="300px"
-                                imageWidth="300px"
+                                imageHeight="250px"
+                                imageWidth="250px"
                                 rotateAmplitude={12}
                                 scaleOnHover={1.05}
                                 showMobileWarning={false}

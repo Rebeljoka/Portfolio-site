@@ -25,7 +25,7 @@ const springValues: SpringOptions = {
 	mass: 2,
 };
 
-export default function TiltedCard({ imageSrc, altText = "Tilted card image", captionText = "", containerHeight = "300px", containerWidth = "100%", imageHeight = "300px", imageWidth = "300px", scaleOnHover = 1.1, rotateAmplitude = 14, showMobileWarning = true, showTooltip = true, overlayContent = null, displayOverlayContent = false, onClick }: TiltedCardProps) {
+export default function TiltedCard({ imageSrc, altText = "Tilted card image", captionText = "", containerHeight = "", containerWidth = "100%", imageHeight = "", imageWidth = "", scaleOnHover = 1.1, rotateAmplitude = 14, showMobileWarning = true, showTooltip = true, overlayContent = null, displayOverlayContent = false, onClick }: TiltedCardProps) {
 	const ref = useRef<HTMLElement>(null);
 	const x = useMotionValue(0);
 	const y = useMotionValue(0);
