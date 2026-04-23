@@ -37,19 +37,19 @@ export default function Contact() {
 		{
 			icon: <FaEnvelope className="text-3xl" />,
 			title: "Email",
-			value: "habib@example.com",
-			link: "mailto:habib@example.com",
+			value: "I will respond within 24-48 hours",
+			link: "mailto:habib.u99@googlemail.com",
 		},
 		{
 			icon: <FaLinkedin className="text-3xl" />,
 			title: "LinkedIn",
-			value: "linkedin.com/in/habibu",
-			link: "https://linkedin.com/in/habibu",
+			value: "Your Next Junior Full-Stack Software Developer",
+			link: "https://www.linkedin.com/in/your-next-jfssd-habib/",
 		},
 		{
 			icon: <FaGithub className="text-3xl" />,
 			title: "GitHub",
-			value: "github.com/Rebeljoka",
+			value: "My Projects and Code Repositories",
 			link: "https://github.com/Rebeljoka",
 		},
 	];
@@ -80,7 +80,7 @@ export default function Contact() {
 						rel="noopener noreferrer"
 						className="contact-card group"
 					>
-						<div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 h-full flex flex-col items-center justify-center text-center hover:border-white/40 transition-all duration-300 hover:scale-105">
+						<div className="bg-linear-to-br from-white/10 to-white/5 backdrop-blur-md border border-white/20 rounded-2xl p-8 h-full flex flex-col items-center justify-center text-center hover:border-white/40 transition-all duration-300 hover:scale-105">
 							<div className="text-white/80 group-hover:text-white mb-6 transition-colors">
 								{item.icon}
 							</div>
@@ -95,7 +95,7 @@ export default function Contact() {
 
 			{/* Contact Form Section */}
 			<div className="max-w-2xl mx-auto mb-16">
-				<div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-10 md:p-16">
+				<div className="bg-linear-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-10 md:p-16">
 					<h2 className="text-4xl md:text-5xl font-bold mb-12">Send a Message</h2>
 
 					{submitted && (
@@ -123,7 +123,7 @@ export default function Contact() {
 								onChange={handleChange}
 								required
 								className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/50 focus:bg-white/10 transition-all duration-300"
-								placeholder="Habib Ullah"
+								placeholder="Full Name"
 							/>
 						</div>
 
@@ -143,7 +143,7 @@ export default function Contact() {
 								onChange={handleChange}
 								required
 								className="w-full px-6 py-4 bg-white/5 border border-white/20 rounded-xl text-white placeholder-white/40 focus:outline-none focus:border-white/50 focus:bg-white/10 transition-all duration-300"
-								placeholder="habib@example.com"
+								placeholder="example@example.com"
 							/>
 						</div>
 
@@ -190,7 +190,7 @@ export default function Contact() {
 						{/* Submit Button */}
 						<button
 							type="submit"
-							className="w-full mt-8 px-8 py-4 bg-gradient-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 border border-white/30 hover:border-white/50 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 group"
+							className="w-full mt-8 px-8 py-4 bg-linear-to-r from-white/20 to-white/10 hover:from-white/30 hover:to-white/20 border border-white/30 hover:border-white/50 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-3 group"
 						>
 							Send Message
 							<HiOutlineArrowNarrowRight className="group-hover:translate-x-1 transition-transform" />
@@ -201,7 +201,7 @@ export default function Contact() {
 
 			{/* CTA Section */}
 			<div className="max-w-3xl mx-auto text-center">
-				<div className="bg-gradient-to-r from-white/5 to-white/5 border border-white/20 rounded-2xl p-12">
+				<div className="bg-linear-to-r from-white/5 to-white/5 border border-white/20 rounded-2xl p-12">
 					<h3 className="text-3xl font-bold mb-4">Prefer Direct Contact?</h3>
 					<p className="text-white/70 mb-8">
 						Feel free to reach out on any of my social platforms or send an email directly.
