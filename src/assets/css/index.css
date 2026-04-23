@@ -65,9 +65,9 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	backdrop-filter: blur(22px);
 	-webkit-backdrop-filter: blur(22px);
 	-moz-backdrop-filter: blur(22px);
+    backdrop-filter: blur(22px);
 	background: rgba(255, 255, 255, 0.12);
 	border-radius: 40px; /* Bigger pill shape */
 	border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
@@ -241,6 +241,7 @@ body {
 
 .footer-bottom p {
 	margin: 0;
+    font-size: 15px;
 }
 
 /* Media Queries */
