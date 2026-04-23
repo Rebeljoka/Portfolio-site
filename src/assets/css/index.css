@@ -56,14 +56,23 @@ body {
 /* Navbar CSS */
 
 .navbar {
+	position: fixed;
+	top: 3rem;
+	left: 50%;
+	transform: translateX(-50%);
 	padding: 1.75rem 2.5rem;
 	gap: 4rem;
-	backdrop-filter: blur(22px); /* Frosted glass */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	backdrop-filter: blur(22px);
 	-webkit-backdrop-filter: blur(22px);
+	-moz-backdrop-filter: blur(22px);
 	background: rgba(255, 255, 255, 0.12);
 	border-radius: 40px; /* Bigger pill shape */
 	border: 1px solid rgba(255, 255, 255, 0.25); /* Subtle border */
-	z-index: 1;
+	z-index: 50;
+	width: max-content;
 }
 
 .navbar > *,
