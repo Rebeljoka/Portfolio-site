@@ -41,7 +41,7 @@ export default function Home() {
 
 	return (
 		<section className="About">
-			<div className="flex justify-center text-white mb-16">
+			<div className="flex justify-center text-white mb-16 profile-container">
 				<div className="w-full">
 					<div className={`grid grid-flow-col grid-rows-3 gap-4 mt-64 mb-4 mx-4 ${isExpanded ? "expanded" : ""}`} onClick={() => setIsExpanded(!isExpanded)}>
 						<div className="row-span-3">

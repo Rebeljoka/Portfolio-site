@@ -8,8 +8,8 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Pages/Home";
 import Projects from "./components/Pages/Projects";
 import About from "./components/Pages/About-me";
+import Contact from "./components/Pages/contact";
 import Footer from "./components/Footer";
-const Contact = () => <div>Contact Page</div>;
 
 function App() {
 	return (

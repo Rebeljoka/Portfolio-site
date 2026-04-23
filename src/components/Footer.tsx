@@ -11,8 +11,8 @@ const Footer: React.FC = () => {
 	return (
 		<footer className={`footer ${isHomePage ? "footer-fixed-home" : ""}`}>
 			<div className="footer-content">
-				<div className="footer-section">
-					<h3>Social</h3>
+				<div className="footer-section Social">
+					<h3 className="noselect">Social</h3>
 					<ul>
 						<li>
 							<a href="https://github.com/Rebeljoka" target="_blank" rel="noopener noreferrer">
@@ -28,11 +28,11 @@ const Footer: React.FC = () => {
 				</div>
 
 				<div className="footer-section">
-					<h3>Contact</h3>
+					<h3 className="noselect">Contact</h3>
 					<ul>
 						<li>
 							<a href="mailto:habib.u99@googlemail.com">
-								<IoIosMail /> habib.u99@googlemail.com
+								<IoIosMail /> Response Time: 24-48 hours
 							</a>
 						</li>
 					</ul>
