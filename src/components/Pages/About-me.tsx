@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Profile from "../../assets/img/profile.jpg";
 import LogoLoop from "../LogoLoop";
+import { useResponsiveView } from "../../hooks/ResponsiveView";
 import { FaHtml5, FaCss3, FaJs, FaReact, FaVuejs, FaBootstrap, FaNodeJs, FaPython, FaGitAlt, FaGithub, } from "react-icons/fa";
 import { SiDjango, SiTailwindcss, SiTypescript, SiVite, SiVercel, SiCloudflare, SiHeroku, SiPostgresql, SiMongodb, } from "react-icons/si";
 import { BiLogoVisualStudio } from "react-icons/bi";
@@ -38,12 +39,13 @@ const ToolsLogos = [
 
 export default function Home() {
 	const [isExpanded, setIsExpanded] = useState(false);
+	const {logoHeight, gap} = useResponsiveView();
 
 	return (
 		<section className="About">
-			<div className="flex justify-center text-white mb-16 profile-container">
+			<div className="flex justify-center text-white mb-12 profile-container">
 				<div className="w-full">
-					<div className={`grid grid-flow-col grid-rows-3 gap-4 mt-64 mb-4 mx-4 ${isExpanded ? "expanded" : ""}`} onClick={() => setIsExpanded(!isExpanded)}>
+					<div className={`grid grid-flow-col grid-rows-3 gap-4 mt-44 lg:mt-48 mb-4 mx-4 ${isExpanded ? "expanded" : ""}`} onClick={() => setIsExpanded(!isExpanded)}>
 						<div className="row-span-3">
 							<img src={Profile} alt="Profile Picture" className="w-lg h-128 rounded-full object-cover object-[45%_35%] 2xl:mx-16 mt-16 mb-16 mx-auto" />
 						</div>
@@ -71,21 +73,21 @@ export default function Home() {
 						</div>
 						<div className="flex flex-wrap gap-8 mb-16">
 							<div className="tech-item w-full">
-								<h3 className="text-6xl font-bold mb-4 pb-4">Frontend</h3>
+								<h3 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 pb-4">Frontend</h3>
 								<div className="LogoLoop-container">
-									<LogoLoop logos={FELogos} speed={100} direction="left" logoHeight={60} gap={60} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Frontend Tech stack" />
+									<LogoLoop logos={FELogos} speed={100} direction="left" logoHeight={logoHeight} gap={gap} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Frontend Tech stack" />
 								</div>
 							</div>
 							<div className="tech-item w-full">
-								<h3 className="text-6xl font-bold mb-4 pb-4 text-right">Backend</h3>
+								<h3 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 pb-4 text-right">Backend</h3>
 								<div className="LogoLoop-container">
-                                    <LogoLoop logos={BELogos} speed={100} direction="right" logoHeight={60} gap={60} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Backend Tech stack" />
+                                    <LogoLoop logos={BELogos} speed={100} direction="right" logoHeight={logoHeight} gap={gap} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Backend Tech stack" />
                                 </div>
 							</div>
                             <div className="tech-item w-full">
-                                <h3 className="text-6xl font-bold mb-4 pb-4">Tools & Platforms</h3>
+                                <h3 className="text-2xl md:text-4xl lg:text-6xl font-bold mb-4 pb-4">Tools & Platforms</h3>
                                 <div className="LogoLoop-container">
-                                    <LogoLoop logos={ToolsLogos} speed={100} direction="left" logoHeight={60} gap={60} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Tools and Platforms" />
+                                    <LogoLoop logos={ToolsLogos} speed={100} direction="left" logoHeight={logoHeight} gap={gap} hoverSpeed={110} scaleOnHover fadeOut fadeOutColor="rgba(0, 0, 0, 0)" ariaLabel="Tools and Platforms" />
                                 </div>
 							</div>
 						</div>

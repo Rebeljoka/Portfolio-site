@@ -4,9 +4,9 @@
 
 /* Web Development, Graphics Design, Content Creation Containers, Tech Stack Container, About Grid - Liquid Glass Background */
 
-.WebDevPJs, .GraphicsDesignPJs, .ContentCreationPJs, .tech-stack-container, .About .grid.grid-flow-col.grid-rows-3, .Contact {
-	backdrop-filter: blur(18px);
+.WebDevPJs, .GraphicsDesignPJs, .ContentCreationPJs, .tech-stack-container, .About .grid.grid-flow-col.grid-rows-3, .GetInTouch, .EmailSection, .CTA {
 	-webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(18px);
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 40px;

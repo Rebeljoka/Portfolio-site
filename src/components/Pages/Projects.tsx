@@ -158,7 +158,7 @@ export default function Projects() {
 				)}
 			</Modal>
 
-            <div className="text-white text-center w-full mt-64 mb-16">
+            <div className="text-white text-center w-full mt-44 lg:mt-48 mb-16">
                 <div className="mx-4 WebDevPJs">
                     <div>
                         <h1 className="text-6xl md:text-9xl lg:text-9xl font-black mb-16 noselect">Web Development Projects</h1>
