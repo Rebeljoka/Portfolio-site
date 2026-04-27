@@ -53,7 +53,7 @@ export default function Contact() {
 	];
 
 	return (
-		<section className="Contact text-white min-h-screen py-16 mt-40 md:mt-32">
+		<section className="Contact text-white min-h-screen mt-44 md:mt-48">
 			<div className="flex justify-center">
 				<div className="w-full">
 					{/* Header Section */}
